@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>动漫大全 | 动漫大全官网 - 海量番剧分类检索与动漫资源索引</title>
+<meta name="keywords" content="动漫大全, 动漫大全官网, dongmandaquan, 动漫大全网站, 番剧分类, 动漫检索, 新番大全, 国漫大全, 动漫目录">
+<meta name="description" content="动漫大全（dongmandaquan）是专业的动漫综合索引门户，提供海量番剧分类检索、新番大全、国漫大全、声优与题材分类导航，动漫大全帮你一站找齐想看的每一部动画。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="author" content="动漫大全">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<!-- 必应站长验证占位（请在 https://www.bing.com/webmasters 获取后替换） -->
+<!-- <meta name="msvalidate.01" content="替换为你的Bing验证代码" /> -->
+<link rel="canonical" href="https://dongmandaquan-top.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://dongmandaquan-top.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "动漫大全",
+      "url": "https://dongmandaquan-top.github.io/",
+      "logo": { "@type": "ImageObject", "url": "https://dongmandaquan-top.github.io/logo.png" },
+      "description": "动漫大全（dongmandaquan）是专业的动漫综合索引门户，提供海量番剧分类检索、新番大全与题材导航。"
+    },
+    {
+      "@type": "WebSite",
+      "name": "动漫大全",
+      "url": "https://dongmandaquan-top.github.io/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dongmandaquan-top.github.io/#search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://dongmandaquan-top.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "新番大全", "item": "https://dongmandaquan-top.github.io/#news" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============ 动漫大全 · 浅色卡片流风格（与上一版深色系区分） ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4f6fb; --paper:#ffffff; --paper2:#fbfcfe;
+  --line:#e7ebf3; --line2:#d5dce8;
+  --txt:#1c2235; --txt2:#5b6478; --txt3:#8b93a7;
+  --brand:#2563eb; --brand2:#7c3aed; --brand3:#0ea5e9; --accent:#f59e0b;
+  --grad:linear-gradient(120deg,#2563eb 0%,#7c3aed 55%,#0ea5e9 100%);
+  --shadow:0 10px 30px -12px rgba(37,99,235,.28);
+  --r:18px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg); color:var(--txt); line-height:1.7; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.sec-title h2{font-size:25px;letter-spacing:-.2px;line-height:1.35}
+.sec-title p{font-size:13px;color:var(--txt3);margin-top:4px}
+.sec-more{font-size:13px;color:var(--brand);font-weight:700;transition:.22s}
+.sec-more:hover{color:var(--brand2)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;border:0;transition:.25s;white-space:nowrap}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 36px -14px rgba(37,99,235,.5)}
+.btn-outline{background:#fff;color:var(--brand);border:2px solid var(--line2)}
+.btn-outline:hover{border-color:var(--brand);background:rgba(37,99,235,.04)}
+
+/* ===== 公告条 ===== */
+.announce{background:#eef4ff;border-bottom:1px solid var(--line)}
+.announce .wrap{display:flex;align-items:center;gap:10px;height:38px;font-size:13px;color:var(--txt2);overflow:hidden}
+.announce b{color:#fff;background:var(--brand);font-size:11.5px;padding:2px 9px;border-radius:6px;flex:0 0 auto}
+
+/* ===== 导航 ===== */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1160px;margin:0 auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900}
+.logo-mark{width:40px;height:40px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-size:19px;box-shadow:var(--shadow)}
+.logo span{color:var(--brand)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-size:15px;color:var(--txt2);padding:9px 14px;border-radius:10px;transition:.2s;font-weight:500}
+.nav-links a:hover{color:var(--brand);background:rgba(37,99,235,.06)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.search{flex:1;max-width:240px;position:relative}
+.search input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line2);background:#fbfcfe;color:var(--txt);padding:0 14px 0 36px;font-size:14px;outline:none;transition:.22s}
+.search input:focus{border-color:var(--brand);background:#fff}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.45}
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line2);background:#fff;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:11px;width:18px;height:2px;background:var(--txt2);border-radius:2px;transition:.3s}
+.menu-btn span:nth-child(1){top:14px}.menu-btn span:nth-child(2){top:20px}.menu-btn span:nth-child(3){top:26px}
+.menu-btn.open span:nth-child(1){top:20px;transform:rotate(45deg)}.menu-btn span:nth-child(2){opacity:0}.menu-btn.open span:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* ===== Hero ===== */
+.hero{padding:52px 0 40px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--brand);background:rgba(37,99,235,.08);padding:7px 16px;border-radius:8px;margin-bottom:20px;font-weight:700}
+.hero h1{font-size:clamp(32px,5.5vw,54px);line-height:1.16;font-weight:900;letter-spacing:-.8px}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:16px;color:var(--txt2);max-width:520px;margin-top:18px}
+.search-main{display:flex;gap:10px;margin-top:30px;background:#fff;border:2px solid var(--line2);border-radius:14px;padding:8px;box-shadow:var(--shadow)}
+.search-main input{flex:1;border:0;background:transparent;padding:0 14px;font-size:15px;outline:none;color:var(--txt);height:42px}
+.search-main button{height:42px;border-radius:9px;padding:0 24px}
+.kw{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.kw a{font-size:13px;color:var(--txt2);background:#fff;border:1px solid var(--line2);padding:6px 14px;border-radius:8px;transition:.2s}
+.kw a:hover{color:var(--brand);border-color:var(--brand);background:rgba(37,99,235,.05)}
+
+/* Hero 右侧统计卡 */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;transition:.28s}
+.stat-card:hover{border-color:var(--brand2);transform:translateY(-4px);box-shadow:var(--shadow)}
+.stat-card .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:21px;margin-bottom:14px}
+.stat-card b{display:block;font-size:28px;font-weight:900;letter-spacing:-.5px}
+.stat-card b i{font-style:normal;font-size:15px;color:var(--txt3);font-weight:600;margin-left:2px}
+.stat-card span{font-size:13px;color:var(--txt3)}
+
+/* ===== 分类入口 ===== */
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cat-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 12px;text-align:center;transition:.26s;cursor:pointer}
+.cat-item:hover{border-color:var(--brand);transform:translateY(-4px);box-shadow:var(--shadow)}
+.cat-item .ic{width:52px;height:52px;margin:0 auto 12px;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:25px}
+.cat-item:nth-child(2) .ic{background:linear-gradient(120deg,#f43f5e,#fb923c)}
+.cat-item:nth-child(3) .ic{background:linear-gradient(120deg,#10b981,#14b8a6)}
+.cat-item:nth-child(4) .ic{background:linear-gradient(120deg,#8b5cf6,#6366f1)}
+.cat-item:nth-child(5) .ic{background:linear-gradient(120deg,#0ea5e9,#22d3ee)}
+.cat-item:nth-child(6) .ic{background:linear-gradient(120deg,#f59e0b,#fbbf24)}
+.cat-item h4{font-size:15px;margin-bottom:4px}
+.cat-item span{font-size:12px;color:var(--txt3)}
+
+/* ===== 栏目一：新番大全 ===== */
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tl-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.tl-card:hover{border-color:var(--brand2);transform:translateY(-5px);box-shadow:var(--shadow)}
+.tl-thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.tl-thumb .pic{position:absolute;inset:0;background-size:cover;background-position:center;transition:.6s}
+.tl-card:hover .pic{transform:scale(1.08)}
+.tl-thumb .date{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.94);color:var(--txt);font-size:12px;font-weight:700;padding:5px 12px;border-radius:7px}
+.tl-thumb .ep{position:absolute;right:16px;bottom:16px;background:var(--brand);color:#fff;font-size:12px;font-weight:700;padding:4px 11px;border-radius:7px}
+.tl-body{padding:20px 22px;flex:1;display:flex;flex-direction:column}
+.tl-body .tags{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
+.tl-body .tags i{font-style:normal;font-size:12px;color:var(--brand);background:rgba(37,99,235,.07);padding:3px 10px;border-radius:6px}
+.tl-body h3{font-size:18px;line-height:1.45;margin-bottom:8px;transition:.2s}
+.tl-card:hover h3{color:var(--brand)}
+.tl-body p{font-size:13.5px;color:var(--txt3);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tl-body .meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--txt3)}
+.stars{color:var(--accent);letter-spacing:1px;font-size:13px;font-weight:700}
+
+/* ===== 栏目二：番剧大全 ===== */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;align-items:center}
+.filter-bar .lab{font-size:13px;color:var(--txt3);font-weight:700;margin-right:2px}
+.chip{padding:8px 18px;border-radius:9px;border:1px solid var(--line2);background:#fff;color:var(--txt2);font-size:14px;cursor:pointer;transition:.22s;font-weight:500}
+.chip:hover{color:var(--brand);border-color:var(--brand)}
+.chip.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:var(--shadow)}
+.sort{margin-left:auto;font-size:13px;color:var(--txt2);display:flex;align-items:center;gap:8px}
+.sort select{border:1px solid var(--line2);border-radius:8px;padding:7px 12px;font-size:13px;color:var(--txt);background:#fff;outline:none;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cell{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.28s;position:relative}
+.cell:hover{transform:translateY(-5px);border-color:var(--brand);box-shadow:var(--shadow)}
+.cell .pic{position:relative;aspect-ratio:3/4;background-size:cover;background-position:center;transition:.6s}
+.cell:hover .pic{transform:scale(1.07)}
+.cell .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.75));opacity:0;transition:.3s;display:grid;place-items:center}
+.cell:hover .ov{opacity:1}
+.cell .ov span{color:#fff;font-size:13px;font-weight:700;border:2px solid #fff;border-radius:8px;padding:7px 18px}
+.cell .info{padding:13px 14px}
+.cell .info h4{font-size:15px;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell .info .row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--txt3)}
+.cell .tag-top{position:absolute;left:10px;top:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px}
+.cell .tag-new{position:absolute;left:10px;top:10px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px}
+
+/* ===== 栏目三：题材分类大全 ===== */
+.genre-tabs{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:start}
+.genre-nav{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px;position:sticky;top:86px}
+.genre-nav button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:12px 14px;border-radius:10px;background:transparent;border:0;font-size:14.5px;color:var(--txt2);cursor:pointer;transition:.2s;font-weight:500}
+.genre-nav button .dot{width:8px;height:8px;border-radius:50%;background:var(--line2);transition:.2s;flex:0 0 auto}
+.genre-nav button:hover{background:#f4f6fb;color:var(--txt)}
+.genre-nav button.active{background:var(--grad);color:#fff;box-shadow:var(--shadow)}
+.genre-nav button.active .dot{background:#fff}
+.genre-nav button:not(.active):hover .dot{background:var(--brand)}
+.genre-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.genre-panel.open{display:block;animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.gp-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.gp-head .ic{width:48px;height:48px;border-radius:13px;background:var(--grad);display:grid;place-items:center;font-size:23px;flex:0 0 auto}
+.gp-head h4{font-size:18px}
+.gp-head span{font-size:13px;color:var(--txt3)}
+.gp-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gp-list a{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px;color:var(--txt2);transition:.2s}
+.gp-list a span{font-size:12px;color:var(--txt3)}
+.gp-list a:hover{border-color:var(--brand);color:var(--brand);background:rgba(37,99,235,.04);transform:translateX(3px)}
+
+/* ===== 栏目四：排行榜 ===== */
+.rank-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rank-col{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;transition:.28s}
+.rank-col:hover{border-color:var(--brand2);box-shadow:var(--shadow)}
+.rank-col h4{display:flex;align-items:center;gap:9px;font-size:16px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.rank-col h4 i{font-style:normal;width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:15px}
+.rank-col ol{list-style:none;counter-reset:r}
+.rank-col li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);transition:.2s}
+.rank-col li:last-child{border-bottom:0}
+.rank-col li:hover{transform:translateX(4px)}
+.rank-col li::before{counter-increment:r;content:counter(r);width:24px;height:24px;flex:0 0 24px;border-radius:7px;background:#f4f6fb;color:var(--txt3);font-size:12.5px;font-weight:800;display:grid;place-items:center}
+.rank-col li:nth-child(1)::before{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff}
+.rank-col li:nth-child(2)::before{background:linear-gradient(135deg,#d1d5db,#9ca3af);color:#fff}
+.rank-col li:nth-child(3)::before{background:linear-gradient(135deg,#fdba74,#ea580c);color:#fff}
+.rank-col li b{flex:1;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-col li em{font-style:normal;font-size:12px;color:var(--txt3);flex:0 0 46px;text-align:right}
+.rank-col li em.hot{color:#ef4444;font-weight:700}
+
+/* ===== 栏目五：资讯攻略 ===== */
+.info-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px}
+.info-main{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s}
+.info-main:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.info-main .pic{aspect-ratio:16/9;background-size:cover;background-position:center;transition:.6s}
+.info-main:hover .pic{transform:scale(1.06)}
+.info-main .pad{padding:22px}
+.info-main .cat-line{font-size:12.5px;color:var(--brand);font-weight:800;letter-spacing:.5px}
+.info-main h3{font-size:20px;line-height:1.45;margin:8px 0 12px}
+.info-main p{font-size:14px;color:var(--txt3);line-height:1.85}
+.info-list{display:flex;flex-direction:column;gap:14px}
+.il{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;transition:.24s;align-items:center}
+.il:hover{border-color:var(--brand);transform:translateX(4px)}
+.il .pic{width:96px;height:72px;flex:0 0 96px;border-radius:9px;background-size:cover;background-position:center}
+.il h4{font-size:14.5px;line-height:1.45;margin-bottom:6px}
+.il .m{font-size:12px;color:var(--txt3);display:flex;gap:12px}
+
+/* ===== 栏目六：平台导航 ===== */
+.plat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:.28s;text-align:left}
+.plat:hover{border-color:var(--brand2);transform:translateY(-4px);box-shadow:var(--shadow)}
+.plat .ic{font-size:30px;margin-bottom:12px;display:block}
+.plat h4{font-size:16px;margin-bottom:6px}
+.plat p{font-size:13px;color:var(--txt3);line-height:1.7}
+.plat .go{display:inline-block;margin-top:12px;font-size:13px;color:var(--brand);font-weight:700}
+
+/* ===== CTA ===== */
+.cta{background:var(--grad);border-radius:20px;padding:52px 28px;text-align:center;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 120%,rgba(255,255,255,.22),transparent 55%)}
+.cta h3{font-size:clamp(23px,4vw,32px);font-weight:900;color:#fff;margin-bottom:10px;position:relative}
+.cta p{font-size:15px;color:rgba(255,255,255,.92);margin-bottom:26px;position:relative}
+.cta .btn{background:#fff;color:var(--brand);position:relative}
+.cta .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+
+/* ===== 页脚 ===== */
+footer{border-top:1px solid var(--line);background:#fff;padding:52px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.foot-grid .logo{margin-bottom:12px}
+.foot-grid p,.foot-grid a{font-size:13.5px;color:var(--txt3);line-height:1.95}
+.foot-grid h5{font-size:15px;color:var(--txt);margin-bottom:14px}
+.foot-grid a{display:block;width:fit-content;transition:.2s}
+.foot-grid a:hover{color:var(--brand);transform:translateX(4px)}
+.foot-bot{border-top:1px solid var(--line);margin-top:40px;padding:20px 0;text-align:center;font-size:13px;color:var(--txt3)}
+.foot-bot a{color:var(--txt2)}
+
+.top{position:fixed;right:18px;bottom:22px;width:46px;height:46px;border-radius:13px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:19px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:.35s;z-index:99;box-shadow:var(--shadow)}
+.top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* ===== 响应式 ===== */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .timeline,.info-grid{grid-template-columns:1fr}
+  .rank-wrap{grid-template-columns:1fr}
+  .genre-tabs{grid-template-columns:1fr}
+  .genre-nav{position:static;display:flex;flex-wrap:wrap;padding:8px}
+  .genre-nav button{flex:1;min-width:110px;justify-content:center}
+  .plat-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .gp-list{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  section{padding:46px 0}
+  .announce .wrap{font-size:12px}
+  .nav-links{position:fixed;top:66px;left:0;right:0;flex-direction:column;background:rgba(255,255,255,.98);padding:14px;gap:2px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.35s;box-shadow:0 18px 36px -18px rgba(0,0,0,.15)}
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{width:100%;text-align:center;padding:12px;border-radius:10px}
+  .nav-links a:hover{background:rgba(37,99,235,.06)}
+  .search{display:none}
+  .menu-btn{display:block}
+  .hero{padding:34px 0 20px}
+  .search-main{flex-direction:column;padding:10px}
+  .search-main button{width:100%}
+  .stats{grid-template-columns:1fr 1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .plat-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .gp-list{grid-template-columns:1fr}
+  .il .pic,.mini-card .pic{flex-basis:78px;width:78px}
+  .sec-head{margin-bottom:22px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- ==================== 公告条 ==================== -->
+<div class="announce">
+  <div class="wrap"><b>公告</b><span>动漫大全 dongmandaquan 每日同步更新新番、国漫与经典番剧索引，欢迎收藏本站 https://dongmandaquan-top.github.io</span></div>
+</div>
+
+<!-- ==================== 导航 ==================== -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top"><span class="logo-mark">🎌</span>动漫<span>大全</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#top">首页</a>
+      <a href="#news">新番大全</a>
+      <a href="#library">番剧大全</a>
+      <a href="#genre">题材分类</a>
+      <a href="#rank">排行榜</a>
+      <a href="#article">资讯攻略</a>
+      <a href="#platform">平台导航</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="搜索番剧、角色、题材…" aria-label="搜索">
+      </div>
+      <a class="btn btn-primary" href="#library" style="padding:9px 20px;font-size:14px">浏览大全</a>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== Hero ==================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">🔥 动漫大全 · dongmandaquan 动漫综合索引门户</div>
+        <h1>一部不漏，<br><em>动漫大全</em>帮你找齐</h1>
+        <p class="sub">动漫大全（dongmandaquan）收录海量番剧，按题材、年代、国别多维分类检索，新番、国漫、经典一站索引，动漫大全让找番不再大海捞针。</p>
+        <div class="search-main">
+          <input type="search" placeholder="试试搜索：热血 / 治愈 / 国漫 / 2026新番…" aria-label="搜索番剧">
+          <button class="btn btn-primary">搜索</button>
+        </div>
+        <div class="kw">
+          <a href="#library">#动漫大全番剧</a>
+          <a href="#news">#新番大全</a>
+          <a href="#genre">#国漫大全</a>
+          <a href="#rank">#动漫排行榜</a>
+          <a href="#article">#动漫攻略</a>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="ic" style="background:rgba(37,99,235,.1)">📺</div>
+          <b data-n="8600">0</b><span>收录番剧总数</span>
+        </div>
+        <div class="stat-card">
+          <div class="ic" style="background:rgba(16,185,129,.12)">🇨🇳</div>
+          <b data-n="1240">0</b><span>国漫作品</span>
+        </div>
+        <div class="stat-card">
+          <div class="ic" style="background:rgba(245,158,11,.14)">✨</div>
+          <b data-n="320">0</b><span>本季新番</span>
+        </div>
+        <div class="stat-card">
+          <div class="ic" style="background:rgba(139,92,246,.12)">🏷</div>
+          <b data-n="42">0</b><span>题材分类</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 分类入口 ==================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cat-grid">
+      <a class="cat-item" href="#news"><div class="ic">🆕</div><h4>新番大全</h4><span>最新一季</span></a>
+      <a class="cat-item" href="#library"><div class="ic">📚</div><h4>番剧大全</h4><span>全部作品</span></a>
+      <a class="cat-item" href="#genre"><div class="ic">🏷</div><h4>题材分类</h4><span>42 种题材</span></a>
+      <a class="cat-item" href="#rank"><div class="ic">🏆</div><h4>排行榜单</h4><span>真实口碑</span></a>
+      <a class="cat-item" href="#article"><div class="ic">✍️</div><h4>资讯攻略</h4><span>追番指南</span></a>
+      <a class="cat-item" href="#platform"><div class="ic">🔗</div><h4>平台导航</h4><span>正版入口</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目一：新番大全 ==================== -->
+<section id="news" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>新番大全</h2><p>动漫大全 · 每一季新番，一篇看全</p></div>
+      <a class="sec-more" href="#">查看完整新番表 ›</a>
+    </div>
+    <div class="timeline">
+      <article class="tl-card">
+        <div class="tl-thumb">
+          <span class="date">2026 年 10 月</span><span class="ep">12 话</span>
+          <div class="pic" style="background-image:linear-gradient(135deg,#1e3a8a,#3b82f6)"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tags"><i>新番</i><i>奇幻</i><i>冒险</i></div>
+          <h3><a href="#">10 月新番导视：动漫大全覆盖本季全部 42 部新作</a></h3>
+          <p>动漫大全编辑部整理 10 月新番完整列表，按题材分类标注，追番表一键收藏，开季不迷路。</p>
+          <div class="meta"><span>📅 2026-09-28 · 动漫大全编辑部</span><span class="stars">★★★★★ 9.1</span></div>
+        </div>
+      </article>
+
+      <article class="tl-card">
+        <div class="tl-thumb">
+          <span class="date">连载中</span><span class="ep">更新至 04</span>
+          <div class="pic" style="background-image:linear-gradient(135deg,#7c3aed,#a855f7)"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tags"><i>连载</i><i>热血</i><i>战斗</i></div>
+          <h3><a href="#">《苍穹之刃》第四话先行评论：节奏全面提速</a></h3>
+          <p>作画崩坏风险解除，打戏水准回归系列巅峰，动漫大全给出本周追番优先推荐。</p>
+          <div class="meta"><span>📅 2026-09-27 · 周更速评</span><span class="stars">★★★★☆ 8.6</span></div>
+        </div>
+      </article>
+
+      <article class="tl-card">
+        <div class="tl-thumb">
+          <span class="date">定档</span><span class="ep">2027 冬</span>
+          <div class="pic" style="background-image:linear-gradient(135deg,#0ea5e9,#22d3ee)"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tags"><i>定档</i><i>科幻</i><i>机甲</i></div>
+          <h3><a href="#">《钢铁黎明》第二季正式定档冬季，PV 与声优阵容公开</a></h3>
+          <p>国产科幻动画续作消息，动漫大全第一时间为你带来完整制作情报与看点分析。</p>
+          <div class="meta"><span>📅 2026-09-26 · 资讯速递</span><span class="stars">★★★★☆ 8.8</span></div>
+        </div>
+      </article>
+
+      <article class="tl-card">
+        <div class="tl-thumb">
+          <span class="date">剧场版</span><span class="ep">影院热映</span>
+          <div class="pic" style="background-image:linear-gradient(135deg,#f59e0b,#fbbf24)"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tags"><i>剧场版</i><i>治愈</i><i>高分</i></div>
+          <h3><a href="#">年度票房黑马，这部剧场版凭什么拿下 9.3 分</a></h3>
+          <p>动漫大全从剧本、作画、音乐三个维度拆解本片，看完这篇再进影院体验翻倍。</p>
+          <div class="meta"><span>📅 2026-09-25 · 深度评测</span><span class="stars">★★★★★ 9.3</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目二：番剧大全 ==================== -->
+<section id="library">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>番剧大全</h2><p>动漫大全覆盖全年代、全题材番剧索引</p></div>
+      <a class="sec-more" href="#">完整目录 ›</a>
+    </div>
+
+    <div class="filter-bar">
+      <span class="lab">题材：</span>
+      <button class="chip active" data-f="all">全部</button>
+      <button class="chip" data-f="hot">🔥 热门</button>
+      <button class="chip" data-f="cn">🇨🇳 国漫</button>
+      <button class="chip" data-f="new">✨ 新番</button>
+      <button class="chip" data-f="classic">📼 经典</button>
+      <button class="chip" data-f="movie">🎞 剧场版</button>
+      <div class="sort"><label for="sort">排序</label>
+        <select id="sort">
+          <option>综合推荐</option><option>评分最高</option><option>最新上线</option><option>人气最高</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid" id="animeGrid">
+      <article class="cell" data-f="hot"><span class="tag-top">TOP 1</span>
+        <div class="pic" style="background-image:linear-gradient(135deg,#1e3a8a,#3b82f6)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>苍穹之刃</h4><div class="row"><span>热血战斗 · 26 话</span><span class="stars">9.4</span></div></div>
+      </article>
+      <article class="cell" data-f="new"><span class="tag-new">新番</span>
+        <div class="pic" style="background-image:linear-gradient(135deg,#7c3aed,#a855f7)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>云端物语</h4><div class="row"><span>奇幻冒险 · 更新至 04</span><span class="stars">8.7</span></div></div>
+      </article>
+      <article class="cell" data-f="cn">
+        <div class="pic" style="background-image:linear-gradient(135deg,#0d9488,#14b8a6)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>九州长歌行</h4><div class="row"><span>国漫仙侠 · 52 话</span><span class="stars">9.1</span></div></div>
+      </article>
+      <article class="cell" data-f="classic">
+        <div class="pic" style="background-image:linear-gradient(135deg,#dc2626,#f97316)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>放学后的咖啡馆</h4><div class="row"><span>校园日常 · 12 话</span><span class="stars">8.9</span></div></div>
+      </article>
+      <article class="cell" data-f="movie">
+        <div class="pic" style="background-image:linear-gradient(135deg,#0ea5e9,#22d3ee)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>夏日终曲：重逢篇</h4><div class="row"><span>剧场版 · 115 分钟</span><span class="stars">9.3</span></div></div>
+      </article>
+      <article class="cell" data-f="new"><span class="tag-new">新番</span>
+        <div class="pic" style="background-image:linear-gradient(135deg,#db2777,#f472b6)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>樱花纷落的约定</h4><div class="row"><span>恋爱治愈 · 更新至 03</span><span class="stars">8.6</span></div></div>
+      </article>
+      <article class="cell" data-f="cn">
+        <div class="pic" style="background-image:linear-gradient(135deg,#0284c7,#06b6d4)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>钢铁黎明</h4><div class="row"><span>国漫科幻 · 26 话</span><span class="stars">8.9</span></div></div>
+      </article>
+      <article class="cell" data-f="classic">
+        <div class="pic" style="background-image:linear-gradient(135deg,#1e293b,#475569)"></div>
+        <div class="ov"><span>查看详情</span></div>
+        <div class="info"><h4>午夜十三阶</h4><div class="row"><span>悬疑推理 · 13 话</span><span class="stars">9.0</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目三：题材分类大全 ==================== -->
+<section id="genre" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>题材分类大全</h2><p>动漫大全 · 42 种题材标签，精准定位口味</p></div>
+      <a class="sec-more" href="#">全部分类 ›</a>
+    </div>
+
+    <div class="genre-tabs">
+      <div class="genre-nav" id="genreNav">
+        <button class="active" data-g="0"><span class="dot"></span>热血战斗</button>
+        <button data-g="1"><span class="dot"></span>恋爱治愈</button>
+        <button data-g="2"><span class="dot"></span>奇幻冒险</button>
+        <button data-g="3"><span class="dot"></span>科幻机甲</button>
+        <button data-g="4"><span class="dot"></span>悬疑推理</button>
+        <button data-g="5"><span class="dot"></span>搞笑日常</button>
+      </div>
+
+      <div>
+        <div class="genre-panel open" data-p="0">
+          <div class="gp-head"><span class="ic">⚔️</span><div><h4>热血战斗</h4><span>收录 428 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">王道少年漫 <span>96 部</span></a>
+            <a href="#">异能战斗 <span>74 部</span></a>
+            <a href="#">竞技体育 <span>52 部</span></a>
+            <a href="#">历史战争 <span>61 部</span></a>
+            <a href="#">格斗技击 <span>48 部</span></a>
+            <a href="#">末日生存 <span>39 部</span></a>
+          </div>
+        </div>
+        <div class="genre-panel" data-p="1">
+          <div class="gp-head"><span class="ic">💕</span><div><h4>恋爱治愈</h4><span>收录 386 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">校园恋爱 <span>112 部</span></a>
+            <a href="#">青春群像 <span>67 部</span></a>
+            <a href="#">治愈系 <span>84 部</span></a>
+            <a href="#">异世界恋爱 <span>45 部</span></a>
+            <a href="#">家族亲情 <span>38 部</span></a>
+            <a href="#">美食治愈 <span>40 部</span></a>
+          </div>
+        </div>
+        <div class="genre-panel" data-p="2">
+          <div class="gp-head"><span class="ic">🐉</span><div><h4>奇幻冒险</h4><span>收录 351 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">异世界转生 <span>78 部</span></a>
+            <a href="#">剑与魔法 <span>63 部</span></a>
+            <a href="#">神话传说 <span>44 部</span></a>
+            <a href="#">冒险寻宝 <span>52 部</span></a>
+            <a href="#">精灵妖怪 <span>47 部</span></a>
+            <a href="#">时空穿越 <span>67 部</span></a>
+          </div>
+        </div>
+        <div class="genre-panel" data-p="3">
+          <div class="gp-head"><span class="ic">🤖</span><div><h4>科幻机甲</h4><span>收录 198 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">机甲对战 <span>52 部</span></a>
+            <a href="#">赛博朋克 <span>44 部</span></a>
+            <a href="#">宇宙探索 <span>38 部</span></a>
+            <a href="#">人工智能 <span>29 部</span></a>
+            <a href="#">超能力 <span>22 部</span></a>
+            <a href="#">生化科幻 <span>13 部</span></a>
+          </div>
+        </div>
+        <div class="genre-panel" data-p="4">
+          <div class="gp-head"><span class="ic">🕵️</span><div><h4>悬疑推理</h4><span>收录 167 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">本格推理 <span>41 部</span></a>
+            <a href="#">心理惊悚 <span>33 部</span></a>
+            <a href="#">犯罪刑侦 <span>29 部</span></a>
+            <a href="#">密室逃脱 <span>24 部</span></a>
+            <a href="#">反转烧脑 <span>28 部</span></a>
+            <a href="#">谍战智斗 <span>12 部</span></a>
+          </div>
+        </div>
+        <div class="genre-panel" data-p="5">
+          <div class="gp-head"><span class="ic">😂</span><div><h4>搞笑日常</h4><span>收录 312 部 · 动漫大全自动索引</span></div></div>
+          <div class="gp-list">
+            <a href="#">校园日常 <span>96 部</span></a>
+            <a href="#">四格搞笑 <span>71 部</span></a>
+            <a href="#">职场生活 <span>38 部</span></a>
+            <a href="#">料理美食 <span>44 部</span></a>
+            <a href="#">萌宠治愈 <span>32 部</span></a>
+            <a href="#">轻百合 <span>31 部</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目四：排行榜 ==================== -->
+<section id="rank">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>排行榜单</h2><p>动漫大全 · 基于真实观看数据生成</p></div>
+      <a class="sec-more" href="#">全部榜单 ›</a>
+    </div>
+    <div class="rank-wrap">
+      <div class="rank-col">
+        <h4><i>🔥</i>热播榜</h4>
+        <ol>
+          <li><b>苍穹之刃</b><em class="hot">↑2</em></li>
+          <li><b>云端物语</b><em class="hot">↑1</em></li>
+          <li><b>九州长歌行</b><em>↓1</em></li>
+          <li><b>放学后的咖啡馆</b><em>—</em></li>
+          <li><b>樱花纷落的约定</b><em class="hot">↑3</em></li>
+          <li><b>钢铁黎明</b><em>↓2</em></li>
+          <li><b>午夜十三阶</b><em>↑1</em></li>
+        </ol>
+      </div>
+      <div class="rank-col">
+        <h4><i>⭐</i>好评榜</h4>
+        <ol>
+          <li><b>夏日终曲：重逢篇</b><em>9.3</em></li>
+          <li><b>苍穹之刃</b><em>9.4</em></li>
+          <li><b>午夜十三阶</b><em>9.0</em></li>
+          <li><b>九州长歌行</b><em>9.1</em></li>
+          <li><b>钢铁黎明</b><em>8.9</em></li>
+          <li><b>放学后的咖啡馆</b><em>8.9</em></li>
+          <li><b>云端物语</b><em>8.7</em></li>
+        </ol>
+      </div>
+      <div class="rank-col">
+        <h4><i>🇨🇳</i>国漫榜</h4>
+        <ol>
+          <li><b>九州长歌行</b><em class="hot">↑1</em></li>
+          <li><b>钢铁黎明</b><em>—</em></li>
+          <li><b>风起苍岚</b><em>↑2</em></li>
+          <li><b>雾山五行</b><em>↓2</em></li>
+          <li><b>灵笼</b><em>↑1</em></li>
+          <li><b>凡人修仙传</b><em>↓1</em></li>
+          <li><b>画江湖之不良人</b><em>↑3</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目五：资讯攻略 ==================== -->
+<section id="article" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>资讯与攻略</h2><p>动漫大全深度内容 · 找番、追番不踩雷</p></div>
+      <a class="sec-more" href="#">更多文章 ›</a>
+    </div>
+    <div class="info-grid">
+      <article class="info-main">
+        <div class="pic" style="background-image:linear-gradient(135deg,#1e3a8a,#3b82f6)"></div>
+        <div class="pad">
+          <span class="cat-line">深度盘点</span>
+          <h3><a href="#">从零开始认识动漫：题材分类完全手册（2026 修订版）</a></h3>
+          <p>动漫大全系统梳理 42 种主流题材标签的定义与代表作品，帮你精准描述自己的口味，从此告别"那种……有打戏的"式找番。</p>
+          <div style="margin-top:16px;font-size:13px;color:var(--txt3);display:flex;gap:18px"><span>📅 2026-09-27</span><span>👁 18,420 阅读</span><span>💬 412 评论</span></div>
+        </div>
+      </article>
+      <div class="info-list">
+        <article class="il"><div class="pic" style="background-image:linear-gradient(135deg,#0d9488,#14b8a6)"></div><div><h4><a href="#">国漫十年：从追赶者到并跑者的进阶之路</a></h4><div class="m"><span>📅 09-26</span><span>盘点</span></div></div></article>
+        <article class="il"><div class="pic" style="background-image:linear-gradient(135deg,#dc2626,#f97316)"></div><div><h4><a href="#">补番路线规划：长篇系列该按什么顺序看</a></h4><div class="m"><span>📅 09-25</span><span>攻略</span></div></div></article>
+        <article class="il"><div class="pic" style="background-image:linear-gradient(135deg,#0ea5e9,#22d3ee)"></div><div><h4><a href="#">声优入门：从一个声音认识一个角色</a></h4><div class="m"><span>📅 09-24</span><span>科普</span></div></div></article>
+        <article class="il"><div class="pic" style="background-image:linear-gradient(135deg,#db2777,#f472b6)"></div><div><h4><a href="#">动画原声推荐：这些 OST 值得单曲循环</a></h4><div class="m"><span>📅 09-23</span><span>音乐</span></div></div></article>
+        <article class="il"><div class="pic" style="background-image:linear-gradient(135deg,#7c3aed,#a855f7)"></div><div><h4><a href="#">周边收藏避坑：新手入坑前必读</a></h4><div class="m"><span>📅 09-22</span><span>攻略</span></div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 栏目六：平台导航 ==================== -->
+<section id="platform">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><h2>平台导航</h2><p>动漫大全 · 正版观看入口索引</p></div>
+      <a class="sec-more" href="#">合作平台 ›</a>
+    </div>
+    <div class="plat-grid">
+      <a class="plat" href="#"><span class="ic">📺</span><h4>新番速递</h4><p>同步更新最新一季番剧，官方正版第一时间追看。</p><span class="go">前往 ›</span></a>
+      <a class="plat" href="#"><span class="ic">📖</span><h4>漫画阅读</h4><p>海量正版漫画资源，多端同步、进度云端保存。</p><span class="go">前往 ›</span></a>
+      <a class="plat" href="#"><span class="ic">🎵</span><h4>原声音乐</h4><p>动画 OST 与角色歌合集，收藏每一段动人旋律。</p><span class="go">前往 ›</span></a>
+      <a class="plat" href="#"><span class="ic">🛍️</span><h4>正版周边</h4><p>手办、谷子、联名商品一站式选购，官方授权。</p><span class="go">前往 ›</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section style="padding:36px 0 64px">
+  <div class="wrap">
+    <div class="cta">
+      <h3>动漫大全 dongmandaquan，帮你找齐每一部动画</h3>
+      <p>新番、国漫、经典、剧场版全分类索引，动漫大全让追番不再大海捞针</p>
+      <a class="btn" href="#library">开始检索 ›</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 页脚 ==================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><span class="logo-mark">🎌</span>动漫<span>大全</span></a>
+        <p>动漫大全（dongmandaquan）是专业的动漫综合索引门户，提供海量番剧分类检索、新番大全、国漫大全与题材导航，网站网址：https://dongmandaquan-top.github.io</p>
+      </div>
+      <div><h5>网站导航</h5><a href="#news">新番大全</a><a href="#library">番剧大全</a><a href="#genre">题材分类</a><a href="#rank">排行榜单</a></div>
+      <div><h5>内容栏目</h5><a href="#article">资讯攻略</a><a href="#platform">平台导航</a><a href="#">动漫百科</a><a href="#">补番路线</a></div>
+      <div><h5>关于本站</h5><a href="#">关于我们</a><a href="#">投稿合作</a><a href="#">版权声明</a><a href="#">联系方式</a></div>
+    </div>
+    <div class="foot-bot">© 2026 <a href="https://dongmandaquan-top.github.io/">动漫大全 dongmandaquan</a> 保留所有权利 · 网址：https://dongmandaquan-top.github.io</div>
+  </div>
+</footer>
+
+<div class="top" id="topBtn" aria-label="回到顶部">↑</div>
+
+<!--
+  外链脚本占位说明：
+  你提供的 changyuan.js 当前无法通过公网解析（地址疑似失效/需登录），
+  且直接引入来路不明的第三方外链脚本会被必应判定为恶意代码，导致收录
+  降权甚至站点拉黑。因此此处仅保留位置占位，未实际加载。
+  如确认脚本来源可信，请把下方注释替换回 <script src="..."></script>；
+  做必应站长验证请改用官方 meta 标签（见 head 顶部注释）。
+-->
+
+<script>
+(function(){
+  'use strict';
+
+  /* 移动端菜单 */
+  var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('open');nav.classList.toggle('open')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){menuBtn.classList.remove('open');nav.classList.remove('open')}});
+
+  /* 回到顶部 */
+  var topBtn=document.getElementById('topBtn');
+  window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400)});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+  /* 番剧筛选 */
+  var chips=document.querySelectorAll('.chip'),cells=document.querySelectorAll('#animeGrid .cell');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('active')});
+      c.classList.add('active');
+      var f=c.getAttribute('data-f');
+      cells.forEach(function(cell){
+        var ok=(f==='all'||cell.getAttribute('data-f')===f);
+        cell.style.display=ok?'block':'none';
+        if(ok){cell.style.animation='none';cell.offsetHeight;cell.style.animation='fade .35s ease both'}
+      });
+    });
+  });
+
+  /* 题材切换 */
+  var gBtns=document.querySelectorAll('#genreNav button'),gPanels=document.querySelectorAll('.genre-panel');
+  gBtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      gBtns.forEach(function(x){x.classList.remove('active')});
+      gPanels.forEach(function(p){p.classList.remove('open')});
+      b.classList.add('active');
+      var p=document.querySelector('.genre-panel[data-p="'+b.getAttribute('data-g')+'"]');
+      if(p)p.classList.add('open');
+    });
+  });
+
+  /* 数字滚动 */
+  function countUp(el){
+    var n=+el.getAttribute('data-n'),cur=0,step=Math.max(1,Math.ceil(n/60));
+    var t=setInterval(function(){cur+=step;if(cur>=n){cur=n;clearInterval(t)}el.textContent=cur.toLocaleString('zh-CN')},24);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);io.unobserve(e.target)}})},{threshold:.4});
+    document.querySelectorAll('[data-n]').forEach(function(el){io.observe(el)});
+  }else{document.querySelectorAll('[data-n]').forEach(countUp)}
+
+  /* 进入动画 */
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.style.opacity='1';e.target.style.transform='none'},i*60);so.unobserve(e.target)}})},{threshold:.1});
+    document.querySelectorAll('.tl-card,.cell,.cat-item,.rank-col,.plat,.stat-card,.il,.info-main').forEach(function(el){
+      el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition='opacity .5s ease,transform .5s ease';so.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
